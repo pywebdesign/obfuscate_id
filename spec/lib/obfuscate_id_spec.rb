@@ -29,11 +29,11 @@ describe ObfuscateId do
     context "when not defined" do
       before do
         class User < ActiveRecord::Base
-          obfuscate_id
+          obfuscate_id spin: 456
         end
 
         class Post < ActiveRecord::Base
-          obfuscate_id
+          obfuscate_id spin: 123
         end
       end
 
